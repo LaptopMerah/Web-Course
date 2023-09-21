@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Assets/Classes.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+nav ul li ::after {
+    color: black;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ff4800;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+nav ul li:hover{
+    background-color:whitesmoke;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    color: black;
+}
+nav ul li :hover::after {
+    width: 100%;
+}
+
+.textboxt {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ffff;
+  padding: 12px 34px;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+}
+
+.btn:hover {
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  color: black;
+  transition: 1s;
+} 
+
+.btns {
+    margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 34px;
+  cursor: pointer;
+border: 1px solid #ffff;  background: transparent;
+  position: relative;
+}
+.btns:hover {
+    border: 1px solid whitesmoke;
+    background: whitesmoke;
+    color: black;
+}
+
+.textboxt h1 {
+    font-size: 52px;
+}
+.textboxt i {
+    font-size: 30px;
+}
+
+.textboxt p {
+    margin: 20px 0px 50px;
+    font-size: 15x;
+}
+
+/* styling main */
+
+body {
+    background-color: #151320;
+    height: 100vh;
+    display: grid;
+    place-items: center center;
+}
+main{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.choose{
+    margin: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+
+.card {
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.card:hover {
+    background-position: 10px;
+}
+
+.container {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.container:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.card1>.container:after {
+    background-image: linear-gradient(135deg,#0100ec,#fb36f4);
+}
+.card2>.container:after {
+    background-image: linear-gradient(135deg,#2bdce3,#42ffdb);
+}
+.card3>.container:after {
+    background-image: linear-gradient(135deg,#ffab1d,#f8501c);
+}
+.card4>.container:after {
+    background-image: linear-gradient(135deg,#2bdce3,#42ffdb);
+}
+.card5>.container:after {
+    background-image: linear-gradient(135deg,#ffab1d,#f8501c);
+}
+.card6>.container:after {
+    background-image: linear-gradient(135deg,#0100ec,#fb36f4);
+}
+
+.details {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.details>h3 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.details>p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+footer {
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+/* window size 850 width set */
+ @media screen and (max-width: 850px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* window size 400 width set */
+@media screen and (max-width: 400px) {
+    .column {
+        width: 100%;
+    }
+} 
